@@ -1,18 +1,18 @@
 # Movie-List
 
-A Flutter mobile app to display movie list using https://api.themoviedb.org API
+A Flutter mobile app to display movie lists using the https://api.themoviedb.org API
 
 ## Explanation
 
-- Uses Clean Code Architecture for Flutter with BLoC as State Management
+- Uses Clean Code Architecture for Flutter with BLoC as state management
   
-- Data that's used only consists of 4 main item parsed from the API:
+- Data that's used only consists of 4 main items parsed from the API:
   -  title,
   -  rating,
   -  poster,
   -  release date
 
-- Testable in Android devices only (not IOS devices) due to lack of testing resource (requires devices running with Apple OS)
+- Testable on Android devices only (not iOS devices) due to a lack of testing resources (requires devices running with Apple OS)
   
 - Have a custom splash screen and app icon
   
@@ -20,16 +20,16 @@ A Flutter mobile app to display movie list using https://api.themoviedb.org API
     
 - Flow:
   #### Fetch Data:
-    - Get the movies data from the API using MovieRepository
-    - Parse the data into Movie data class by filtering the data to get only necessary data (title, rating, poster, and release date)
+    - Get movies data from the API using MovieRepository
+    - Parse the data into Movie data class by filtering the data to get only the necessary data (title, rating, poster, and release date)
   #### BLoC for Movie List View:
-    Using BLoC pattern, fetch the data from Movie data class to suffice all cases:
-  
-    - Handle display movie list on app start
-    - Search Result Handling
-    - Filter Result Handling
-    - Filter + Search Result Handling
-    - Error Result Handling
+   Using BLoC pattern, fetch the data from Movie data class to suffice in all cases:
+  
+    - Handle the movie list displayed on app start
+    - Search Result Handling
+    - Filter Result Handling
+    - Filter + Search Result Handling
+    - Error Result Handling
   #### Display:
-     - Implemented using a specific UI design, display all the result for multiple cases handled in the BLoC
-     - MovieListItem display the information per movie item from the list of movies consisted in Movie data class 
+     - Implemented using a specific UI design, display all the results for multiple cases handled in the BLoC
+     - MovieListItem displays the information per movie item from the list of movies contained in Movie data class 
