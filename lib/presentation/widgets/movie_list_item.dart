@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../domain/entities/movie.dart';
 
-
+/// Handle Movie item data in Movie list
 class MovieListItem extends StatelessWidget {
   final Movie movie;
 
@@ -18,13 +18,18 @@ class MovieListItem extends StatelessWidget {
       ),
       child: Row(
         children: [
+
+          /// --Poster
           Image.network(
             'https://image.tmdb.org/t/p/w500${movie.posterPath}',
             width: 50.0,
             height: 75.0,
             fit: BoxFit.cover,
           ),
+
           const SizedBox(width: 10.0),
+
+          /// --Movie title and release date
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

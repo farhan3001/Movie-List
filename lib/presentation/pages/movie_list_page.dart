@@ -41,6 +41,8 @@ class _MovieListPageState extends State<MovieListPage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
+
+      /// --Header
       appBar: AppBar(
         title: const Text(
             'Wiki Movies',
@@ -53,8 +55,12 @@ class _MovieListPageState extends State<MovieListPage> {
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),
+
+      /// --Body
       body: Column(
         children: [
+
+          /// --SearchBox/Input -> handle onSearchChanged
           Padding(
             padding: const EdgeInsets.only(left: 8, right: 8, bottom: 5, top:20),
             child: TextField(
@@ -66,10 +72,13 @@ class _MovieListPageState extends State<MovieListPage> {
             ),
           ),
 
+          /// --Subtitle
           Align(
             alignment: Alignment.centerLeft,
             child: Row(
               children: [
+
+                /// --Filter Header
                 const Padding(
                   padding: EdgeInsets.only(left: 12, top: 5, bottom: 5),
                   child: Text(
@@ -83,6 +92,7 @@ class _MovieListPageState extends State<MovieListPage> {
 
                 const SizedBox(width: 222),
 
+                /// --Movie counter in list
                 Padding(
                   padding: const EdgeInsets.only(top: 5, bottom: 5, right: 12),
                   child: BlocBuilder<MovieBloc, MovieState>(
@@ -109,9 +119,9 @@ class _MovieListPageState extends State<MovieListPage> {
                 ),
               ],
             )
-
           ),
 
+          /// --Category Selector
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
@@ -130,14 +140,14 @@ class _MovieListPageState extends State<MovieListPage> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0), // Set the radius to make edges curvy
                     ),
-
                     selectedColor: Colors.lightBlueAccent.withOpacity(0.5),
-
                   )
                 );
               }).toList(),
             ),
           ),
+
+          /// --Movie List
           Expanded(
             child: BlocBuilder<MovieBloc, MovieState>(
               builder: (context, state) {
@@ -149,7 +159,8 @@ class _MovieListPageState extends State<MovieListPage> {
                   return ListView.builder(
                     itemCount: listMovies.length,
                     itemBuilder: (context, index) {
-                      return MovieListItem(movie: listMovies[index]);
+                      return MovieListItem(movie: listMovies[index]); /// -> assign each movie data in
+                                                                      ///    list to MovieListItem
                     },
                   );
                 } else if (state is MovieError) {

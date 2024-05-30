@@ -1,5 +1,6 @@
 import '../../domain/entities/movie.dart';
 
+/// Filter JSON object to only have specific data types
 class MovieModel extends Movie {
   MovieModel({
     required super.title,

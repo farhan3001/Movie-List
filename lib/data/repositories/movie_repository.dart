@@ -3,10 +3,12 @@ import 'package:http/http.dart' as http;
 
 import '../../data/models/movie_model.dart';
 
+/// Abstract method (MovieRepository)
 abstract class MovieRepository {
   Future<List<MovieModel>> getMovies();
 }
 
+/// Abstract method implementation to get Movies data from API
 class MovieRepositoryImpl implements MovieRepository {
   final http.Client client;
 
