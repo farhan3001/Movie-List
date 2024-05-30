@@ -37,6 +37,5 @@ A Flutter mobile app to display movie lists using the https://api.themoviedb.org
 ## How to Install
 - Clone this repository using the command: `git clone https://github.com/farhan3001/Movie-List.git`
 - Go to the folder directory (or open through your favorite IDE)
-- in terminal, run with the command: `flutter run`
-    (make sure to have a mobile device or emulator ready and have flutter in your device)
+- Open terminal, run with the command: `flutter run` (make sure to have a mobile device or emulator ready and have flutter in your device)
     - See this [reference](https://docs.flutter.dev/get-started/install) to install flutter
