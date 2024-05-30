@@ -31,4 +31,5 @@ A Flutter mobile app to display movie list using https://api.themoviedb.org API
     - Filter + Search Result Handling
     - Error Result Handling
   #### Display:
-     Implemented using a specific UI design, display all the result for multiple cases handled in the BLoC
+     - Implemented using a specific UI design, display all the result for multiple cases handled in the BLoC
+     - MovieListItem display the information per movie item from the list of movies consisted in Movie data class 
