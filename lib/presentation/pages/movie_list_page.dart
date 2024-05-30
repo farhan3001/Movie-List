@@ -106,7 +106,7 @@ class _MovieListPageState extends State<MovieListPage> {
 
                 /// --Total Movie in list counter
                 Padding(
-                  padding: const EdgeInsets.only(top: 5, bottom: 5, right: 12),
+                  padding: const EdgeInsets.only(top: 5, bottom: 10, right: 12),
                   child: BlocBuilder<MovieBloc, MovieState>(
                     builder: (context, state) {
                       if (state is MovieLoaded) {
@@ -134,28 +134,31 @@ class _MovieListPageState extends State<MovieListPage> {
           ),
 
           /// --Rating category Selector -> handle onRatingChanged
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: ratings.map((rating) {
-                return Padding(
-                  padding: const EdgeInsets.only(top: 5, bottom: 5, right: 13, left: 13),
-                  child: ChoiceChip(
-                    showCheckmark: false,
-                    label: Text(rating),
-                    selected: _selectedRating == rating,
-                    onSelected: (selected) {
-                      if (selected) {
-                        _onRatingChanged(rating);
-                      }
-                    },
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0), // Set the radius to make edges curvy
-                    ),
-                    selectedColor: Colors.lightBlueAccent.withOpacity(0.5),
-                  )
-                );
-              }).toList(),
+          ScrollConfiguration(
+            behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: ratings.map((rating) {
+                  return Padding(
+                    padding: const EdgeInsets.only(bottom: 5, right: 13, left: 13),
+                    child: ChoiceChip(
+                      showCheckmark: false,
+                      label: Text(rating),
+                      selected: _selectedRating == rating,
+                      onSelected: (selected) {
+                        if (selected) {
+                          _onRatingChanged(rating);
+                        }
+                      },
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20.0), // Set the radius to make edges curvy
+                      ),
+                      selectedColor: Colors.lightBlueAccent.withOpacity(0.5),
+                    )
+                  );
+                }).toList(),
+              ),
             ),
           ),
 
