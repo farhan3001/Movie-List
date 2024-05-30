@@ -25,11 +25,11 @@ A Flutter mobile app to display movie lists using the https://api.themoviedb.org
   #### BLoC for Movie List View:
     Using BLoC pattern, fetch the data from Movie data class to suffice in all cases:
   
-    - Handle the movie list displayed on app start
-    - Search Result Handling
-    - Filter Result Handling
-    - Filter + Search Result Handling
-    - Error Result Handling
+    - Handle the movie list displayed on app start
+    - Search Result Handling
+    - Filter Result Handling
+    - Filter + Search Result Handling
+    - Error Result Handling
   #### Display:
-     - Implemented using a specific UI design, display all the results for multiple cases handled in the BLoC
-     - MovieListItem displays the information per movie item from the list of movies contained in Movie data class 
+    - Implemented using a specific UI design, display all the results for multiple cases handled in the BLoC
+    - MovieListItem displays the information per movie item from the list of movies contained in Movie data class 
