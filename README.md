@@ -23,7 +23,7 @@ A Flutter mobile app to display movie lists using the https://api.themoviedb.org
     - Get movies data from the API using MovieRepository
     - Parse the data into Movie data class by filtering the data to get only the necessary data (title, rating, poster, and release date)
   #### BLoC for Movie List View:
-   Using BLoC pattern, fetch the data from Movie data class to suffice in all cases:
+    Using BLoC pattern, fetch the data from Movie data class to suffice in all cases:
   
     - Handle the movie list displayed on app start
     - Search Result Handling
