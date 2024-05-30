@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../data/entities/movie.dart';
-import '../../domain/use_case/get_movies.dart';
+import '../../data/use_case/get_movies.dart';
+import '../../domain/entities/movie.dart';
 
 // Events
 abstract class MovieEvent extends Equatable {

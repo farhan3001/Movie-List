@@ -1,4 +1,4 @@
-import '../../data/entities/movie.dart';
+import '../../domain/entities/movie.dart';
 import '../repositories/movie_repository.dart';
 
 class GetMovies {
