@@ -12,7 +12,11 @@ A Flutter mobile app to list movies using https://api.themoviedb.org API
   -  poster,
   -  release date
 
-- Testable in all device
+- Testable in Android devices only (not IOS devices) due to lack of testing resource (requires devices running with Apple OS)
+  
+- Have a custom splash screen and app icon
+  
+- Screenshots of all the use cases are located in the /screenshots folder
     
 - Flow:
   #### Fetch Data:
