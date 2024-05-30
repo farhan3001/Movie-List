@@ -32,4 +32,10 @@ A Flutter mobile app to display movie lists using the https://api.themoviedb.org
     - Error Result Handling
   #### Display:
     - Implemented using a specific UI design, display all the results for multiple cases handled in the BLoC
-    - MovieListItem displays the information per movie item from the list of movies contained in Movie data class 
+    - MovieListItem displays the information per movie item from the list of movies contained in Movie data class
+
+## How to Install
+- Clone this repository using the command: git clone https://github.com/farhan3001/Movie-List.git
+- Go to the folder directory (or open through your favorite IDE)
+- run with command: flutter run (make sure to have a mobile device or emulator ready and have flutter in your device)
+    - See this [reference](https://docs.flutter.dev/get-started/install) to install flutter
