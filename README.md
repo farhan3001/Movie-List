@@ -16,7 +16,7 @@ A Flutter mobile app to list movies using https://api.themoviedb.org API
   
 - Have a custom splash screen and app icon
   
-- Screenshots of all the use cases are located in the screenshots folder
+- Screenshots of all the use cases are located in the [screenshots](https://github.com/farhan3001/Movie-List/tree/master/screenshots) folder
     
 - Flow:
   #### Fetch Data:
