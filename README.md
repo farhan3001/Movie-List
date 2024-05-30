@@ -1,6 +1,6 @@
 # Movie-List
 
-A Flutter mobile app to list movies using https://api.themoviedb.org API
+A Flutter mobile app to display movie list using https://api.themoviedb.org API
 
 ## Explanation
 
