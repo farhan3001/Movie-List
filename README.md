@@ -39,3 +39,4 @@ A Flutter mobile app to display movie lists using the https://api.themoviedb.org
 - Go to the folder directory (or open through your favorite IDE)
 - Open terminal, run with the command: `flutter run` (make sure to have a mobile device or emulator ready and have flutter in your device)
     - See this [reference](https://docs.flutter.dev/get-started/install) to install flutter
+- Or download the APK through this [link](https://drive.google.com/file/d/1OMQpwUsHaRXBPgY0ku79z5dL_vx2lIbv/view?usp=sharing)
