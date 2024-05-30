@@ -1,3 +1,5 @@
+
+/// Movie data class
 class Movie {
   final String title;
   final String posterPath;
