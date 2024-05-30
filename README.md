@@ -7,9 +7,9 @@ A Flutter mobile app to display movie lists using the https://api.themoviedb.org
 - Uses Clean Code Architecture for Flutter with BLoC as state management
   
 - Data that's used only consists of 4 main items parsed from the API:
-  -  title,
-  -  rating,
-  -  poster,
+  -  title
+  -  rating
+  -  poster
   -  release date
 
 - Testable on Android devices only (not iOS devices) due to a lack of testing resources (requires devices running with Apple OS)
