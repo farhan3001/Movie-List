@@ -71,7 +71,14 @@ class _MovieListPageState extends State<MovieListPage> {
             child: TextField(
               decoration: const InputDecoration(
                 labelText: 'Search',
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.black,
+                    width: 1
+                  )
+                ),
+                focusedBorder: OutlineInputBorder(),
+                floatingLabelStyle: TextStyle(color: Colors.black)
               ),
               onChanged: _onSearchChanged,
             ),
