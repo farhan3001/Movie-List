@@ -5,7 +5,7 @@ import '../../domain/entities/movie.dart';
 import '../blocs/movies_bloc.dart';
 import '../widgets/movie_list_item.dart';
 
-
+/// Display Movie List
 class MovieListPage extends StatefulWidget {
   const MovieListPage({super.key});
 
@@ -14,11 +14,14 @@ class MovieListPage extends StatefulWidget {
 }
 
 class _MovieListPageState extends State<MovieListPage> {
+
+  /// Init variables and values
   List<Movie> listMovies = [];
   String _searchQuery = '';
   String _selectedRating = 'All';
   final List<String> ratings = ['All', 'Bad', 'Good', 'Great', 'Recommend'];
 
+  /// Assign state on search query
   void _onSearchChanged(String query) {
     setState(() {
       _searchQuery = query;
@@ -26,6 +29,7 @@ class _MovieListPageState extends State<MovieListPage> {
     _applySearchAndFilter();
   }
 
+  /// Assign state on filter rating
   void _onRatingChanged(String rating) {
     setState(() {
       _selectedRating = rating;
@@ -33,6 +37,7 @@ class _MovieListPageState extends State<MovieListPage> {
     _applySearchAndFilter();
   }
 
+  /// Call method SearchAndFilterMovies
   void _applySearchAndFilter() {
     context.read<MovieBloc>().add(SearchAndFilterMovies(_searchQuery, _selectedRating));
   }
@@ -92,7 +97,7 @@ class _MovieListPageState extends State<MovieListPage> {
 
                 const SizedBox(width: 222),
 
-                /// --Movie counter in list
+                /// --Total Movie in list counter
                 Padding(
                   padding: const EdgeInsets.only(top: 5, bottom: 5, right: 12),
                   child: BlocBuilder<MovieBloc, MovieState>(
@@ -121,7 +126,7 @@ class _MovieListPageState extends State<MovieListPage> {
             )
           ),
 
-          /// --Category Selector
+          /// --Rating category Selector -> handle onRatingChanged
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
