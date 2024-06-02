@@ -58,7 +58,7 @@ class _MovieListPageState extends State<MovieListPage> {
             ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.blue[400],
       ),
 
       /// --Body

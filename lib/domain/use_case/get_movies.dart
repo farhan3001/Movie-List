@@ -1,5 +1,5 @@
+import '../../data/repositories/movie_repository.dart';
 import '../../domain/entities/movie.dart';
-import '../repositories/movie_repository.dart';
 
 /// Movie Interface
 class GetMovies {

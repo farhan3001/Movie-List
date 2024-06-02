@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:http/http.dart' as http;
 
 import 'data/repositories/movie_repository.dart';
-import 'data/use_case/get_movies.dart';
+import 'domain/use_case/get_movies.dart';
 import 'presentation/blocs/movies_bloc.dart';
 import 'presentation/pages/movie_list_page.dart';
 
